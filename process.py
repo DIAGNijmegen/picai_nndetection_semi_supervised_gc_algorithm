@@ -31,7 +31,7 @@ class MissingSequenceError(Exception):
 
     def __init__(self, name, folder):
         message = f"Could not find scan for {name} in {folder} (files: {os.listdir(folder)})"
-        super.__init__(message)
+        super().__init__(message)
 
 
 class MultipleScansSameSequencesError(Exception):
@@ -39,7 +39,7 @@ class MultipleScansSameSequencesError(Exception):
 
     def __init__(self, name, folder):
         message = f"Found multiple scans for {name} in {folder} (files: {os.listdir(folder)})"
-        super.__init__(message)
+        super().__init__(message)
 
 
 def strip_metadata(img: sitk.Image) -> None:
